@@ -1,0 +1,78 @@
+/* Global Styles */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Title */
+h1 {
+font-size: 55px;
+text-align: center;
+}
+
+/* Author */
+h2 {
+font-size: 25px;
+text-align: center;
+}
+
+/* Name */
+h3 {
+font-size: 20px;
+text-align: center;
+}
+
+/* Questions */
+h4 {
+    font-size: 20px;
+    font-style: oblique;
+}
+
+/* Content */
+body {
+    background-color: rgb(146, 175, 153);
+    font: size 18px ; 
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+/* Question Styles */
+
+#question1 img {
+    width: 508;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#question2 img {
+    width: 508;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#question9 img {
+    width: 408;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#references {
+    background-color: rgb(194, 224, 201);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+
+}
+
+#references ul {
+    list-style: none;
+}
