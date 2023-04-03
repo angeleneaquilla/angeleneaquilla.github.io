@@ -1,0 +1,88 @@
+/* I decided to implement a light pastel pink colour for the
+background because I think it would work well and create
+a visually-pleasing contrast with the colours that I 
+implemented for the grids and their borders */
+*{
+    background-color: #f5cac3;
+}
+/* I used a grid that contains 5 columns and 7 rows as
+Hedra-page 25 uses the same grid composition. There will be 
+gaps between the grids to replicate the comic reference */
+#grid-container{
+    display: grid;
+    margin: auto;
+    padding: 10vw 0vw;
+    width: 50vw;
+    height: 70vw;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(7, auto);
+    gap: 0.75vw;
+}
+/* For the grids' inner colours, I chose a pastel green tint
+to complement the pastel pink background. These two shades
+work harmoniously and balance each other well. Pink warms 
+up the green tone while a pastel green shade grounds the 
+pink and keeps it earthy. As for the borders, I wanted to 
+maintain the balance of the two colours but also implement 
+some contrast. Hence, I opted for a darker shade of green 
+to highlight the panels' borders without overshadowing the 
+rest of the colours. Similarly, the image reference utilises 
+a very dark blue-violet shade for the borders and the outlines 
+of its illustrations within those panels */
+
+/* In the Hedra comic panel, we see grids that displays 
+incomplete borders. For these areas that don't have an 
+outline, I decided to use dashed lines instead of using no 
+lines because it better represents the askew and jagged 
+style of bordering used in Hedra-page 25 */
+.grid-item {
+    border: 2px dashed darkgreen;
+    background-color: #84a59d;
+    place-self: center stretch;
+    align-self: stretch;
+    text-align: center;
+}
+/* Hedra-page 25 consists of panels that show rounded corners. 
+To simplify the process of style assignation of each grid 
+items, I implemented an ID for the rounded corners and assign 
+them to the grid items */
+#rounded-corner-top-left {
+    border-top-left-radius: 50%;
+    border-top: 5px solid darkgreen;
+    border-left: 5px solid darkgreen;
+}
+
+#rounded-corner-top-right {
+    border-top-right-radius: 50%;
+    border-top: 5px solid darkgreen;
+    border-right: 5px solid darkgreen;
+}
+
+#rounded-corner-bottom-right {
+    border-bottom-right-radius: 50%;
+    border-bottom: 5px solid darkgreen;
+    border-right: 5px solid darkgreen;
+}
+
+#rounded-corner-bottom-left {
+    border-bottom-left-radius: 50%;
+    border-bottom: 5px solid darkgreen;
+    border-left: 5px solid darkgreen;
+}
+/* I implemented classes for the panel border of each side 
+because Hedra-page 25 uses differing placements of borders */
+.border-top {
+    border-top: 5px solid darkgreen;
+}
+
+.border-bottom {
+    border-bottom: 5px solid darkgreen;
+}
+
+.border-right {
+    border-right: 5px solid darkgreen;
+}
+
+.border-left {
+    border-left: 5px solid darkgreen;
+}
