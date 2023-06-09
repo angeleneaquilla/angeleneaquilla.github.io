@@ -1,0 +1,337 @@
+h1
+{
+    color: #ffffff; /* The white color is chosen to ensure high contrast against the background and make the text highly visible. */
+    font-family:sans-serif; 
+    font-size: 80px;
+    position: fixed; /*The fixed positioning ensures that the heading remains fixed at a specific position 
+    on the viewport, even when scrolling, creating a persistent element.*/
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    top: 35px;
+}
+h2
+{
+    font-family: sans-serif;
+    color: #4198c0;
+}
+p
+{
+    font-family: sans-serif;
+    font-size: 13px;
+}
+/*The font-family property is set to sans-serif for h1, h2, and p elements. Sans-serif fonts are commonly 
+used for their clean and modern appearance, making the text more legible and easy to read.*/
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(169, 238, 238);
+}
+/*The background-color property is set to rgb(169, 238, 238), which represents a shade of light blue. 
+This choice of color creates a calm and inviting atmosphere, enhancing the overall visual appeal of the webpage.*/
+
+/*The bubbles (represented by the .Bubble class) are styled using CSS properties like position, width, height, 
+border-radius, and box-shadow. These properties give the bubbles a circular shape, rounded corners, and a subtle 
+inset box shadow effect, creating a visually appealing and cohesive design.*/
+.Bubble 
+{
+    position: absolute ;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 25px rgba(255,255,255,0.25);
+    animation: animate 8s ease-in-out infinite;
+}
+/*The animation-delay property is used to stagger the start times of the bubble animations. By applying different 
+delay values to each bubble, a cascading effect is achieved, adding visual interest and depth to the animation.*/
+.Bubble.custom {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -200px;
+    top: 10px;
+    animation-delay: -4s;
+}
+/*The .Bubble:nth-child() selectors are used to target specific bubbles within the animation sequence and apply 
+custom styles to them. Each selector has unique positioning properties (top, bottom, left, right) and animation 
+delays (animation-delay) to create variation in the appearance and movement of the bubbles. This variation adds visual 
+interest and a sense of randomness to the animation.*/
+.Bubble:nth-child(3)
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: 100px;
+    top: -300px;
+    animation-delay: -6s;
+}
+.Bubble:nth-child(4)
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: -120px;
+    bottom: -200px;
+    animation-delay: -3s;
+}
+.Bubble:nth-child(5)
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    left: -120px;
+    top: -180px;
+    animation-delay: -5s;
+}
+.Bubble:nth-child(6)
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    right: -190px;
+    bottom: -300px;
+    animation-delay: -1s;
+}
+.Bubble:nth-child(7)
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: -300px;
+    animation-delay: -1s;
+}
+.Bubble:nth-child(8)
+{
+    position: relative;
+    width: 270px;
+    height: 270px;
+    top: 20px;
+    animation-delay: -1s;
+}
+.Bubble:nth-child(9)
+{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    bottom: -300px;
+    right: 1100px;
+    animation-delay: -1s;
+}
+/*The @keyframes rule and animate animation are used to define the movement of the bubbles. The keyframes 
+specify that the bubbles should move up and down along the y-axis (translateY) at different stages of the 
+animation (0%, 50%, 100%). This animation adds a dynamic element to the bubbles, making them appear alive 
+and playful.*/
+@keyframes animate
+{
+    0%,100%
+    {
+        transform: translateY(-20px);
+    } 
+    50%
+    {
+        transform: translateY(20px);
+    }
+}
+/*The .Bubble span selector sets the positioning of the individual bubble elements inside the main bubbles. 
+They are positioned absolutely and have a border-radius property of 50%, creating circular shapes. These 
+elements add visual detail to the bubbles and contribute to their overall appearance.*/
+.Bubble span
+{
+    position: absolute;
+    border-radius: 50%;
+}
+/*The .Bubble::before and .Bubble::after selectors create pseudo-elements that appear before and after each 
+bubble, respectively. They are positioned absolutely and have circular shapes with different dimensions. These 
+elements provide additional visual elements and depth to the bubbles, making them visually appealing.*/
+.Bubble::before
+{
+    content: '';
+    position: absolute;
+    top: 50px; 
+    left: 45px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+}
+.Bubble::after
+{
+    content: '';
+    position: absolute;
+    top: 80px; 
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+}
+/*TThe .Bubble span:nth-child() selectors define the styles for the individual span elements 
+inside the bubbles. Each selector specifies different border colors and blur effects for the spans, 
+creating a varied and colorful appearance. These combination of colors, blurs, and rotations adds visual 
+diversity and enhances the overall visual appeal of the bubbles.*/
+.Bubble span:nth-child(1)
+{
+    inset: 10px;
+    border-left: 15px solid #6ed1ff;
+    filter: blur(8px);
+}
+.Bubble span:nth-child(2)
+{
+    inset: 10px;
+    border-right: 15px solid #f36a9a;
+    filter: blur(8px); 
+}
+.Bubble span:nth-child(3)
+{
+    inset: 20px;
+    border-top: 15px solid #f8ee90;
+    filter: blur(8px); 
+}
+.Bubble span:nth-child(4)
+{
+    inset: 30px;
+    border-left: 15px solid #fc9ebf;
+    filter: blur(12px);
+}
+.Bubble span:nth-child(5)
+{
+    inset: 10px;
+    border-bottom: 10px solid rgb(255, 249, 249);
+    filter: blur(25px );
+    transform: rotate(330deg);
+}
+.button
+{
+    position: fixed;
+    top: 93%;
+    right: 90%;
+    width: 120px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover
+{
+    background-color: rgb(91, 109, 143);
+    color: #fff;
+}
+/*The .popup .overlay class is used to create a semi-transparent overlay that covers the entire screen 
+when the popup is active. This overlay helps to focus the user's attention on the popup content and provides 
+a visual cue that the rest of the page is inactive. It also adds a layer of depth to the design, enhancing 
+the overall visual appeal.*/
+.popup .overlay
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index:1;
+    display: none;
+}
+/*The .popup .content class represents the content container of the popup. It is positioned in the center 
+of the screen using the top: 50%; left: 50%; transform: translate(-50%,-50%) properties. This positioning 
+ensures that the popup content is centered both horizontally and vertically, creating a balanced and 
+visually pleasing composition.*/
+.popup .content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #fff;
+    width: 1100px;
+    height: 650px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/*The .popup .close-btn class is responsible for styling the close button within the popup. It is positioned 
+in the top-right corner of the popup using the position: absolute, right: 20px, and top: 20px properties. The 
+contrasting background color and the hover effect help make the button more prominent and intuitive for users 
+to close the popup.*/
+.popup .close-btn
+{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+.popup .close-btn:hover
+{
+    background-color: rgb(91, 109, 143);
+    color: #fff;
+}
+/*The .popup.active .overlay and .popup.active .content selectors are used to activate the popup by adding 
+the active class to the corresponding elements. This activation is typically done through JavaScript or user 
+interactions. The transition effect (transition: all 300ms ease-in-out) provides a smooth and visually appealing 
+animation when the popup appears on the screen.*/
+.popup.active .overlay 
+{
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+/*The #muteButton selector styles the mute button in the bottom-right corner of the page. It provides a visual 
+control for users to mute or unmute audio content. The contrasting background color and hover effect make the 
+button more noticeable and indicate interactivity.*/
+#muteButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #muteButton:hover {
+    background-color: rgb(91, 109, 143);
+    color: #fff;
+  }
+  /*The #repositionButton selector styles the reposition button in the top-right corner of the page. It allows users 
+  to reposition the popup or perform other related actions. The button's contrasting background color and hover effect 
+  make it visually distinct and encourage user interaction.*/
+  #repositionButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fdfdfd;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #repositionButton:hover {
+    background-color: rgb(91, 109, 143);
+  }

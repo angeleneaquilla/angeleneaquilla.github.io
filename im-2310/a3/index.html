@@ -8,13 +8,139 @@
 
         <link rel="stylesheet" href="style.css">
 
+    <Title>Assignment 3 Interactive Media</Title>
+    </head>
+    <h1> Bubble Pop! </h1>
+    <body>
+        <!--I was having issues with the background music not playing, so I added the preload attribute to have the browser
+        start loading the audio file immediately which helps making the background music play consistently even after reloading
+        the page-->
+        <audio id="backgroundMusic" src="background_music.mp3" preload="auto" autoplay loop></audio>
+        <div id="bubbleContainer"></div>
+         <!-- Initial bubbles -->
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble custom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="Bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Popup window -->
+        <div class="popup" id="popup">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <h2>About Bubble Pop</h2>
+                <!-- Project description -->
+                <p>“Bubble Pop” is a captivating digital experience that combines visual aesthetics, sound triggers, and user feedback. 
+                    This project revolves around the concept of interacting with translucent bubbles that respond to user actions. By 
+                    incorporating the interaction design principle of feedback and introducing sound triggers for bubble popping, the 
+                    project creates an engaging and immersive experience. Additionally, the project offers background music that can be 
+                    muted or unmuted, providing users with control over their auditory experience.</p>
+
+                <p> This interactive project features a visually appealing environment with floating translucent bubbles. I used a light 
+                    blue for the backdrop to capture this lighthearted and playful environment. Each bubble possesses dynamic animations, 
+                    capturing the essence of playfulness and creating a delightful experience. Users can interact with the bubbles by 
+                    clicking on them, resulting in a satisfying popping sound triggered by the sound effect feature. This integration of 
+                    sound enriches the sensory experience and adds an extra layer of engagement. Furthermore, the background music adds 
+                    ambiance, setting the calming mood for the overall experience. Users can conveniently toggle the background music on and off 
+                    by clicking a dedicated button on the right bottom corner, allowing them to personalise their interactive journey. 
+                    Furthermore, I added a button that says "Pop More!" that allows user to continuously interact with the website and
+                    pop more bubbles while the music is still playing in the background. The button allows the bubbles to be repositioned
+                    in random areas of the website, making the user have to scroll through the website to find the bubble and pop it. </p>
+                    
+                <p>One of the fundamental principles driving this project is feedback. By providing users with immediate and tangible 
+                    responses, the interactive bubbles create a sense of direct interaction and connection. When a user clicks on a 
+                    bubble, it instantly responds by playing a popping sound, visually reinforcing the action. This feedback loop fosters 
+                    engagement and interactivity, giving users a clear sense of cause and effect. The feedback principle ensures that 
+                    users feel connected to the digital environment, enhancing their overall experience and satisfaction.</p>
+                    
+                <p>While developing this interactive project, several challenges were encountered. One challenge involved achieving the 
+                    desired appearance of the translucent bubbles. Balancing visual aesthetics, responsiveness, and the desired round 
+                    shape required careful adjustments of CSS properties such as opacity, box-shadow, and border-radius. Extensive 
+                    experimentation and fine-tuning were necessary to strike the perfect balance, resulting in visually appealing and 
+                    authentic translucent bubbles. Another challenge involved synchronizing the sound trigger with the bubble popping 
+                    animation. Coordinating the timing of the animation, sound effect, and feedback required meticulous attention to 
+                    detail. By utilizing event listeners and animation callbacks, the project was able to achieve synchronization, 
+                    providing users with a satisfying experience of visually popping bubbles accompanied by the corresponding sound 
+                    effect.</p>
+                    
+                <p>While the project successfully captures the essence of translucency and playfulness, there are areas that could be 
+                    enhanced and improved. One consideration would be to introduce more diverse interactive elements beyond bubble popping, 
+                    such as color changes or particle effects. Additionally, incorporating dynamic behaviors or patterns for the bubbles 
+                    could further enhance the playful nature of the project. Furthermore, expanding the variety of sound effects based on 
+                    bubble interactions could create a more immersive audio experience. These additions would add layers of depth and 
+                    exploration, enhancing the project's overall interactivity and user engagement.</p>
+                    
+                <p>Overall, this project brings together elements of visual aesthetics, sound triggers, and user feedback to create a 
+                    captivating digital experience. By leveraging the principles of translucency and playfulness, users are immersed in an 
+                    interactive journey filled with engaging interactions, delightful animations, and satisfying audio feedback. Overcoming 
+                    these challenges during development has surely led to valuable insights for my future projects.</p>
+                <p>- Background music is Awake by Pafino (https://freetouse.com/music/pufino/awake)</p>
+                <p>- Popping sound effect is Bubble Pop by YehawSnail (https://freesound.org/people/YehawSnail/sounds/683587/)</p>
+            </div>
+        </div>
+        <!-- Button to toggle the popup window -->
+        <button onclick="togglePopup()" class="button">Project Statement</button>
+
+         <!-- Button to toggle the background music -->
+        <button id="muteButton">Mute</button>
+
+        <!-- Button to reposition bubbles -->
+        <button id="repositionButton">Pop More!</button>
+    
         <script src="script.js"></script>
 
-    </head>
-
-    <body>
-        <h1> This is Angie's boilerplate</h1>
-        
     </body>
 
 </html>
